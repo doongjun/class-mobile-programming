@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>jinja2 : macro</title>
+</head>
+{% macro render_href(key, value) %}
+    <li><a href="{{ value }}"> {{ key }} </a></li>
+{% endmacro %}
+<body bgcolor="white">
+한국 방송국들
+<hr>
+<ul>
+{% for key, value in result.items() %}
+	{{ render_href (key, value) }}
+{% endfor %}
+<ul>
+</body>
+</html>

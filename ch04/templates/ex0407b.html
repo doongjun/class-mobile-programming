@@ -1,0 +1,6 @@
+{% extends "mybase.html" %} {% block title %} jinja2:extends {% endblock %} {%
+block body %} 1~20까지 숫자 출력
+<hr />
+{% for i in range(20) %} &nbsp; {{i+1}} {% if (i+1)%5==0 %}<br />
+{% endif %} {% endfor %}<br />
+{% endblock %}

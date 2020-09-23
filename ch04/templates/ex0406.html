@@ -1,0 +1,19 @@
+{% import "macro.html" as mcr %}
+<html>
+<head>
+<title>jinja2 : include</title>
+</head>
+{% macro render_href(key, value) %}
+    <li><a href="{{ value }}"> {{ key }} </a></li>
+{% endmacro %}
+<body bgcolor="white">
+인기있는 나라별 간단한 점심식사2
+<hr>
+<ul>
+{% for key, value in result.items() %}
+	{{ mcr.render_dictionary (key, value) }}
+{% endfor %}
+<ul>
+{%include "mycommon.html" %}
+</body>
+</html>
