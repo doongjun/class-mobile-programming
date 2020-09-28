@@ -1,0 +1,6 @@
+{% extends "mybase.html" %} {% block title %}HTML Form {% endblock %} {% block
+body %}
+<form method="post" action="{{url_for('ex0504')}}">
+  x단 : <input type="text" name="x" size="10" /><br />
+  <input type="submit" />
+</form>

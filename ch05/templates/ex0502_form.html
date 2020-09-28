@@ -1,0 +1,16 @@
+{% extends "mybase.html" %} {% block title %}HTML Form {% endblock %} {% block
+body %}
+<form method="post" action="{{url_for('ex0502')}}">
+  당신의 성별을 선택하세요<br />
+  <input type="radio" name="gender" value="male" />Man
+  <input type="radio" name="gender" value="female" />Woman
+  <br />
+  응시할 과목을 선택하세요.(복수선택 가능)<br />
+  <input type="checkbox" name="test" value="t1" />국어
+  <input type="checkbox" name="test" value="t2" />영어
+  <input type="checkbox" name="test" value="t3" />수학
+  <input type="checkbox" name="test" value="t4" />과학
+  <br />
+  <input type="reset" value="재설정" />
+  <input type="submit" value="전송" />
+</form>
