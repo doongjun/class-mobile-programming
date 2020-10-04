@@ -1,2 +1,8 @@
 {% extends "mybase.html" %} {% block title %}HTML Form {% endblock %} {% block
 body %}
+<form method="post" action="{{url_for('ex0501')}}">
+  이름:<input type="text" name="name" size="10" /><br />
+  암호:<input type="password" name="password" size="20" /><br />
+  <input type="submit" value="전송" />
+</form>
+{% endblock %}

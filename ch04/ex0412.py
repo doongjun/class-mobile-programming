@@ -8,4 +8,9 @@ bootstrap = Bootstrap(app)
 
 @app.route("/")
 def example12a():
+    return render_template("ex0412a.html")
+
+
+@app.route("/ex0412")
+def example12b():
     return render_template("notexist.html")

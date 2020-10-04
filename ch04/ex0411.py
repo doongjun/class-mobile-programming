@@ -14,3 +14,13 @@ def index():
 @app.route("/ex0411a")
 def example11a():
     return render_template("ex0411a.html")
+
+
+@app.route("/ex0411b")
+def example11b():
+    return render_template("ex0411b.html")
+
+
+@app.route("/ex0411c")
+def example11c():
+    return render_template("ex0411c.html")

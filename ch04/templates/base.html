@@ -1,13 +1,14 @@
-{% extends "bootstrap/base.html" %} {% block navbar %}
-<div class="navbar navbar-inverse" role>
+{% extends "bootstrap/base.html" %} {% block title %} Flask {% endblock %} {%
+block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Flask</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/ex0412">ex0412</a></li>
     </ul>
   </div>
 </div>
+{% endblock %}

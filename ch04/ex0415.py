@@ -6,19 +6,19 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 
-@app.route("/ex0414a")
+@app.route("/ex0415a")
 def example14a():
-    return render_template("ex0303.html")
+    return render_template("ex0415a.html")
 
 
-@app.route("/ex0414b")
+@app.route("/ex0415b")
 def example14b():
-    return render_template("ex0304.html")
+    return render_template("ex0415b.html")
 
 
-@app.route("/ex0414c")
+@app.route("/ex0415c")
 def example14c():
-    return render_template("ex0305.html")
+    return render_template("ex0415c.html")
 
 
 @app.errorhandler(404)

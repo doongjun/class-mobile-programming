@@ -1,0 +1,5 @@
+{% extends "mybase.html" %} {% block title %}HTML Form {% endblock %} {% block
+body %}
+<h4>전송된 데이터들 확인해보세요!</h4>
+{% for key, value in form.items() %} {{key}} : {{value}} <br />
+{% endfor %} {% endblock %}
