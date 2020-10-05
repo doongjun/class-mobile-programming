@@ -8,6 +8,6 @@ app = Flask(__name__)
 def ex0504():
     if request.method == "POST":
         x = request.form['x']
-        return render_template("ex0504.html", x=x)
+        return render_template("ex0504.html", x=int(x))
     else:
         return render_template("ex0504_form.html")

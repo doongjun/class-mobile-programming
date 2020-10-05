@@ -1,0 +1,9 @@
+{% extends "mybase.html" %} {% block title %}flask Form {% endblock %} {% block
+body %} 사용자 입력 데이터들 : <br />
+{% for key, value in fdata.items() %} {{key}} = {{value}} <br />
+{% endfor %} {% endblock %}
+<form method="post">
+  {{form.hidden_tag()}} {{form.name.label}}:{{form.name}}<br />
+  {{form.password.label}}:{{form.password}} {{form.submit()}}
+</form>
+{% endblock %}

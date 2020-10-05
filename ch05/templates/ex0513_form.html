@@ -1,0 +1,8 @@
+{% extends "mybase.html" %} {% from "_formhelpers.html" import render_field %}
+{% block title %} example : flask Form {% endblock %} {% block body %}
+&lt;SHIFT&gt; 혹은 &lt;CTRL&gt; key를 사용해서 다중 선택
+<form method="post">
+  {{form.hidden_tag()}}
+  <dl>{{render_field(form.where)}} {{render_field(form.subjects)}}</dl>
+  {{form.submit()}}
+</form>

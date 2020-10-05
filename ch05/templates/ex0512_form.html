@@ -1,0 +1,9 @@
+{% extends "mybase.html" %} {% block title %}flask Form {% endblock %} {% block
+body %}
+<form method="POST">
+  {{form.hidden_tag()}} 당산의 성별을 선택하세요.<br />
+  {% for subfield in form.gender %} {{subfield}} {subfield.label} {% endfor
+  %}<br />
+  당신은 결혼을 하셨나요? <br />
+  {{form.married}}
+</form>
