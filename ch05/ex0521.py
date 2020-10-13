@@ -25,12 +25,8 @@ def ex0521():
         form.name.data = ""
         form.password.data = ""
         return redirect(url_for("ex0521"))
-    return render_template("ex0511.html", form=form)
+    return render_template("ex0511.html", form=form, name=session.get()
 
-
-@app.route("/")
+@ app.route("/")
 def hello():
     return "hello world"
-
-
-@app.route("/ex0521")

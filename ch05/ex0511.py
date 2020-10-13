@@ -15,12 +15,17 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = "hard to guess string"
 
 
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+
 @app.route("/ex0511", methods=['GET', 'POST'])
 def ex0511():
     name = None
     form = LoginForm()
     if form.validate_on_submit():
         name = form.name.data
-        form.name.date = ""
-        form.password.date = ""
+        form.name.data = ""
+        form.password.data = ""
     return render_template("ex0511.html", form=form, name=name)

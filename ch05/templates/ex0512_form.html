@@ -5,5 +5,9 @@ body %}
   {% for subfield in form.gender %} {{subfield}} {subfield.label} {% endfor
   %}<br />
   당신은 결혼을 하셨나요? <br />
-  {{form.married}}
+  {{form.married}} {{form.married.label}} <br />
+  {{form.submit()}}
 </form>
+당신의 성별을 선택하세요. (Bootstrap) <br />
+{% for subfield in form.gender %}
+<div class="form-field">{{subfield}} {{subfield.label}}</div>
