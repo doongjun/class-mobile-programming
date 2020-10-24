@@ -1,7 +1,5 @@
-{% extends "mybase.html" %} 
-{% block title %}flask Form {% endblock %} 
-{% block body %} 
-{% if name %} 안녕하세요, {{name}} {% else %} 안녕하세요, 처음 방문이시군요! {% endif %}
+{% extends "mybase.html" %} {% block title %}flask Form {% endblock %} {% block
+    body %} {% if name %} 안녕하세요, {{name}} {% else %} 안녕하세요, 처음 방문이시군요! {% endif %}
     {% if not known %}
     <p>만나서 반가워요</p>
     {% else %}

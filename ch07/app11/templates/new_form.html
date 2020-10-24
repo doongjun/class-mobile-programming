@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+새로운 메세지
+{% endblock %}
+
+{% block body %}
+<i>새글쓰기</i>
+<table>
+    <form method="post">
+        <tr>
+            <td>제목</td>
+            <td><input type="text" name="title" size=70></td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td> <textarea cols="70" rows="5" name="content"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan=2 align="center">
+                <input type="submit" value="등록">
+                <input type="reset" value="재작성">
+            </td>
+        </tr>
+    </form>
+</table>
+{% endblock %}
