@@ -1,15 +1,22 @@
 from flask import Flask, g, request, Response, make_response
-from flask import session
+from flask import session, render_template
 from datetime import datetime, date, timedelta
 
 app = Flask(__name__)  # flask 생성
 app.debug = True  # 에러 정보 더 많이 알려준다.
+# app.jinja_env.trim_blocks = True 공백 제거
 
 app.config.update(
     SECRET_KEY='X1243yRH!mMwf',
     SESSION_COOKIE_NAME='pyweb_flask_session',
     PERMANENT_SESSION_LIFETIME=timedelta(31)      # 31 days  cf. minutes=30
 )
+
+
+@app.route("/tmp")
+def tmp():
+    title = "test"
+    return render_template('index.html', title="<strong>"+title+"</strong>")
 
 # 다음 형태로 요청했요청했을때 해당 key로 Cookie를 굽는 코드를 작성하시오.
 # http://localhost:5000/wc?key=token&val=abc
