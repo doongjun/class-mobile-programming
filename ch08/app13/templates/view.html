@@ -1,0 +1,25 @@
+{% extends "mybase.html" %}
+
+{% block title %}
+
+Message View
+{% endblock %}
+
+{% block body %}
+<I>글읽기</I> <BR>
+<TABLE border=1>
+<TR>
+    <TD> 제목 </TD>
+    <TD> {{ post.title }} </TD>
+</TR> <TR>
+    <TD> 내용</TD>
+    <TD> {{ post.content }} </TD>
+</TR> <TR>
+    <TD>작성일</TD>
+    <TD>{{ post.cdate }} </TD>
+</TR>
+</TABLE>
+<A = HREF= "{{ url_for(".list") }}"> 목록보기 </A>
+<a href = "{{ url_for('.update',mid=post.id)}}">수정하기</a>
+<a href="{{ url_for(".delete", mid=post.id) }}">삭제하기</a>
+{% endblock %}

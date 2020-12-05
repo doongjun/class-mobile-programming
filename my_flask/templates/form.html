@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <br>
+    <h1>구독해주셔서 감사합니다.</h1>
+    <small>입력정보를 확인해주세요</small>
+    <br><br>
+    
+    <ul class="list-group">
+    {% for subscriber in subscribers %}
+        <li class="list-group-item">{{ subscriber }}</li>
+    {% endfor %}
+    </ul>
+    </div>
+
+{% endblock %}

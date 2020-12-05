@@ -1,0 +1,32 @@
+{% extends "mybase.html" %}
+
+{% block title %}
+
+Simple BBS
+{% endblock %}
+
+{% block body%}
+<A HREF = "{{url_for(".new_form")}}">새글쓰기</A>
+<TABLE BORDER="1">
+<TR>
+    <TH> 번호 </TH>
+    <TH> 제목 </TH>
+    <TH> 작성일시 </TH> 
+</TR>
+{% if num < 1 %}
+<!-- 레코드셋에 레코드가 없으면 -->
+      <TR> 
+          <TD COLSPAN=3> 게시물이 하나도 없어요. <TD>
+      </TR>
+{% else %}
+<!-- 레코드셋에 레코드들이 있으면, 한 레코드씩 반복하여 출력한다. -->
+     {% for post in posts %}
+     <TR>
+         <TD> {{post.id}} </TD>
+         <TD> <A HREF="{{ url_for(".view", mid=post.id) }}"> {{post.title}}</A></TD>  <!-- 메시지를 읽어오는 것 -->
+         <TD> {{ post.cdate }}</TD>
+     </TR>
+     {% endfor %}
+{% endif %}
+</TABLE>
+{% endblock %}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+
+@import "components/screen-header.css";
+
+body {
+  color: #2e363e;
+  font-family: "Open Sans", sans-serif;
+  height: 1000vh;
+  font-size: 1000px;
+}
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+h1 {
+  font-size: 500px;
+}

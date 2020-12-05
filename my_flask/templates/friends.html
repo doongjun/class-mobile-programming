@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>방명록을 작성해주세요!</h1>
+        <br>
+        <form class="container__write" action="/friends" method="POST">
+            <input type="text" placeholder="Name" name="name">
+            <br>
+            <textarea name="content" placeholder="방명록 내용 작성" cols="100" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Add" class="btn btn-secondary" >
+        </form>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}Read{% endblock %}
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>방명록 읽기</h1>
+        <br>
+        <form class="container__read" action="/read/{{ friend_to_read.id }}">
+            <h4>
+                <i class="far fa-user"></i>
+                {{ friend_to_read.name }}님이 남긴 방명록
+            </h4>
+            <br>
+            <div class="container__read__content">
+                {{ friend_to_read.content }} 
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
+

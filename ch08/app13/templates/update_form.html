@@ -1,0 +1,25 @@
+{% extends "mybase.html"%}
+{% block title %}
+updateform
+{% endblock %}
+
+{% block body %}
+<I>수정하기</I>
+<TABLE>
+<FORM METHOD="post">
+<TR>
+    <TD>제목</TD>
+    <TD> <INPUT TYPE="text" NAME="title" SIZE=70
+            VALUE = " {{ post.title }} "> </TD>
+</TR><TR>
+    <TD>내용</TD>
+    <TD> <TEXTAREA COLS="70" ROWS="5" NAME="content">{{ post.content }}
+             </TEXTAREA> </TD>
+</TR><TR>
+    <TD COLSPAN=2 ALIGN="center">
+        <INPUT TYPE="submit" VALUE="수정완료">
+        <INPUT TYPE="reset" VALUE="재작성">
+    </TD>
+</FORM>
+</TABLE>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="container">
+        <h1>About Eulji University...</h1>
+        <ul class="list-group">
+        <p>
+            {% for name in names %}
+                {% if name == '의료IT학과' %}
+                    <li class="list-group-item active">의료IT학과</li>
+                {% else %}
+                    <li class="list-group-item">{{ name }}</li>
+                {% endif %}
+            {% endfor %}
+        </p>
+        </ul>
+    </div>
+
+{% endblock %}
+
+

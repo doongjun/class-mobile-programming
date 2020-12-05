@@ -1,0 +1,15 @@
+{% extends "mybase.html" %}
+{% block title %} Example : Flask Form {% endblock %}
+
+{% block body %}
+{% if name %}
+    Hello, {{ name }}
+{% else %}
+    Hello, Stranger
+{% endif %}
+<FORM METHOD="post">           <!-- #5.FlaskForm -->
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} : {{ form.name }} <BR>
+    {{ form.submit() }}
+</FORM>
+{% endblock%}
